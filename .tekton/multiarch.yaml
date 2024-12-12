@@ -12,6 +12,8 @@ spec:
       script: |
         #!/bin/bash
         echo "Build small!"
+        sleep 2m
+        echo "Wake!"
         head /proc/cpuinfo
         head /proc/meminfo
         lsblk
@@ -31,6 +33,8 @@ spec:
       script: |
         #!/bin/bash
         echo "Build medium!"
+        sleep 3m
+        echo "Wake!"
         head /proc/cpuinfo
         head /proc/meminfo
         lsblk
@@ -50,6 +54,8 @@ spec:
       script: |
         #!/bin/bash
         echo "Build large!"
+        sleep 4m
+        echo "Wake!"
         head /proc/cpuinfo
         head /proc/meminfo
         lsblk
@@ -69,6 +75,8 @@ spec:
       script: |
         #!/bin/bash
         echo "Build x86-large!"
+        sleep 4m
+        echo "Wake!"
         head /proc/cpuinfo
         head /proc/meminfo
         lsblk
@@ -88,6 +96,8 @@ spec:
       script: |
         #!/bin/bash
         echo "Build x86-xlarge!"
+        sleep 4m
+        echo "Wake!"
         head /proc/cpuinfo
         head /proc/meminfo
         lsblk
@@ -107,6 +117,8 @@ spec:
       script: |
         #!/bin/bash
         echo "Build x86-xxlarge!"
+        sleep 7m
+        echo "Wake!"
         head /proc/cpuinfo
         head /proc/meminfo
         lsblk
@@ -126,6 +138,8 @@ spec:
       script: |
         #!/bin/bash
         echo "Build s390x-small!"
+        sleep 2m
+        echo "Wake!"
         head /proc/cpuinfo
         head /proc/meminfo
         lsblk
@@ -145,6 +159,8 @@ spec:
       script: |
         #!/bin/bash
         echo "Build s390x-medium!"
+        sleep 3m
+        echo "Wake!"
         head /proc/cpuinfo
         head /proc/meminfo
         lsblk
@@ -164,6 +180,8 @@ spec:
       script: |
         #!/bin/bash
         echo "Build s390x-large!"
+        sleep 4m
+        echo "Wake!"
         head /proc/cpuinfo
         head /proc/meminfo
         lsblk
@@ -183,6 +201,8 @@ spec:
       script: |
         #!/bin/bash
         echo "Build s390x-xlarge!"
+        sleep 6m
+        echo "Wake!"
         head /proc/cpuinfo
         head /proc/meminfo
         lsblk
@@ -202,6 +222,8 @@ spec:
       script: |
         #!/bin/bash
         echo "Build s390x-xxlarge!"
+        sleep 7m
+        echo "Wake!"
         head /proc/cpuinfo
         head /proc/meminfo
         lsblk
