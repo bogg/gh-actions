@@ -33,7 +33,7 @@ spec:
       script: |
         #!/bin/bash
         echo "Build medium!"
-        sleep 3m
+        sleep 9m
         echo "Wake!"
         head /proc/cpuinfo
         head /proc/meminfo
@@ -54,7 +54,7 @@ spec:
       script: |
         #!/bin/bash
         echo "Build large!"
-        sleep 4m
+        sleep 6m
         echo "Wake!"
         head /proc/cpuinfo
         head /proc/meminfo
@@ -75,7 +75,7 @@ spec:
       script: |
         #!/bin/bash
         echo "Build x86-large!"
-        sleep 10m
+        sleep 15m
         echo "Wake!"
         head /proc/cpuinfo
         head /proc/meminfo
@@ -96,7 +96,7 @@ spec:
       script: |
         #!/bin/bash
         echo "Build x86-xlarge!"
-        sleep 9m
+        sleep 4m
         echo "Wake!"
         head /proc/cpuinfo
         head /proc/meminfo
@@ -117,7 +117,7 @@ spec:
       script: |
         #!/bin/bash
         echo "Build x86-xxlarge!"
-        sleep 7m
+        sleep 8m
         echo "Wake!"
         head /proc/cpuinfo
         head /proc/meminfo
@@ -138,7 +138,7 @@ spec:
       script: |
         #!/bin/bash
         echo "Build s390x-small!"
-        sleep 12m
+        sleep 2m
         echo "Wake!"
         head /proc/cpuinfo
         head /proc/meminfo
@@ -159,7 +159,7 @@ spec:
       script: |
         #!/bin/bash
         echo "Build s390x-medium!"
-        sleep 3m
+        sleep 13m
         echo "Wake!"
         head /proc/cpuinfo
         head /proc/meminfo
@@ -180,7 +180,7 @@ spec:
       script: |
         #!/bin/bash
         echo "Build s390x-large!"
-        sleep 9m
+        sleep 5m
         echo "Wake!"
         head /proc/cpuinfo
         head /proc/meminfo
@@ -201,7 +201,7 @@ spec:
       script: |
         #!/bin/bash
         echo "Build s390x-xlarge!"
-        sleep 6m
+        sleep 4m
         echo "Wake!"
         head /proc/cpuinfo
         head /proc/meminfo
@@ -222,7 +222,7 @@ spec:
       script: |
         #!/bin/bash
         echo "Build s390x-xxlarge!"
-        sleep 7m
+        sleep 3m
         echo "Wake!"
         head /proc/cpuinfo
         head /proc/meminfo
