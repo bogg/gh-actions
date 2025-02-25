@@ -75,7 +75,7 @@ spec:
       script: |
         #!/bin/bash
         echo "Build x86-large!"
-        sleep 4m
+        sleep 10m
         echo "Wake!"
         head /proc/cpuinfo
         head /proc/meminfo
@@ -96,7 +96,7 @@ spec:
       script: |
         #!/bin/bash
         echo "Build x86-xlarge!"
-        sleep 4m
+        sleep 9m
         echo "Wake!"
         head /proc/cpuinfo
         head /proc/meminfo
@@ -138,7 +138,7 @@ spec:
       script: |
         #!/bin/bash
         echo "Build s390x-small!"
-        sleep 2m
+        sleep 12m
         echo "Wake!"
         head /proc/cpuinfo
         head /proc/meminfo
@@ -180,7 +180,7 @@ spec:
       script: |
         #!/bin/bash
         echo "Build s390x-large!"
-        sleep 4m
+        sleep 9m
         echo "Wake!"
         head /proc/cpuinfo
         head /proc/meminfo
