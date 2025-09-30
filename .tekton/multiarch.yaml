@@ -377,15 +377,6 @@ spec:
     - name: build-ppc64-small
       taskRef:
         name: build-ppc64-small
-    - name: build-ppc64-medium
-      taskRef:
-        name: build-ppc64-medium
-    - name: build-ppc64-large
-      taskRef:
-        name: build-ppc64-large
-    - name: build-ppc64-xlarge
-      taskRef:
-        name: build-ppc64-xlarge
 ---
 apiVersion: tekton.dev/v1beta1
 kind: TriggerTemplate
