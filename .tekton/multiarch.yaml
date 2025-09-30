@@ -230,6 +230,111 @@ spec:
         df -h .
 ---
 apiVersion: tekton.dev/v1
+kind: Task
+metadata:
+  name: build-ppc64-small
+  labels:
+    runtimeClassName: ppc64le-small
+spec:
+  params:
+  steps:
+    - name: build
+      image: icr.io/continuous-delivery/base-images/base:v1.6.0
+      script: |
+        #!/bin/bash
+        echo "Build ppc64le-small!"
+        sleep 2m
+        echo "Wake!"
+        head /proc/cpuinfo
+        head /proc/meminfo
+        lsblk
+        df -h .
+---
+apiVersion: tekton.dev/v1
+kind: Task
+metadata:
+  name: build-ppc64-medium
+  labels:
+    runtimeClassName: ppc64le-medium
+spec:
+  params:
+  steps:
+    - name: build
+      image: icr.io/continuous-delivery/base-images/base:v1.6.0
+      script: |
+        #!/bin/bash
+        echo "Build ppc64le-medium!"
+        sleep 13m
+        echo "Wake!"
+        head /proc/cpuinfo
+        head /proc/meminfo
+        lsblk
+        df -h .
+---
+apiVersion: tekton.dev/v1
+kind: Task
+metadata:
+  name: build-ppc64-large
+  labels:
+    runtimeClassName: ppc64le-large
+spec:
+  params:
+  steps:
+    - name: build
+      image: icr.io/continuous-delivery/base-images/base:v1.6.0
+      script: |
+        #!/bin/bash
+        echo "Build ppc64le-large!"
+        sleep 5m
+        echo "Wake!"
+        head /proc/cpuinfo
+        head /proc/meminfo
+        lsblk
+        df -h .
+---
+apiVersion: tekton.dev/v1
+kind: Task
+metadata:
+  name: build-ppc64-xlarge
+  labels:
+    runtimeClassName: ppc64le-xlarge
+spec:
+  params:
+  steps:
+    - name: build
+      image: icr.io/continuous-delivery/base-images/base:v1.6.0
+      script: |
+        #!/bin/bash
+        echo "Build ppc64le-xlarge!"
+        sleep 4m
+        echo "Wake!"
+        head /proc/cpuinfo
+        head /proc/meminfo
+        lsblk
+        df -h .
+---
+apiVersion: tekton.dev/v1
+kind: Task
+metadata:
+  name: build-ppc64-xxlarge
+  labels:
+    runtimeClassName: ppc64le-xxlarge
+spec:
+  params:
+  steps:
+    - name: build
+      image: icr.io/continuous-delivery/base-images/base:v1.6.0
+      script: |
+        #!/bin/bash
+        echo "Build ppc64le-xxlarge!"
+        sleep 3m
+        echo "Wake!"
+        head /proc/cpuinfo
+        head /proc/meminfo
+        lsblk
+        df -h .
+---
+apiVersion: tekton.dev/v1
 kind: Pipeline
 metadata:
   name: pipeline-multiarch
@@ -269,6 +374,21 @@ spec:
     - name: build-s390x-xxlarge
       taskRef:
         name: build-s390x-xxlarge
+    - name: build-ppc64-small
+      taskRef:
+        name: build-ppc64-small
+    - name: build-ppc64-medium
+      taskRef:
+        name: build-ppc64-medium
+    - name: build-ppc64-large
+      taskRef:
+        name: build-ppc64-large
+    - name: build-ppc64-xlarge
+      taskRef:
+        name: build-ppc64-xlarge
+    - name: build-ppc64-xxlarge
+      taskRef:
+        name: build-ppc64-xxlarge
 ---
 apiVersion: tekton.dev/v1beta1
 kind: TriggerTemplate
